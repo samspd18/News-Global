@@ -1,0 +1,17 @@
+font used - Montserrat
+category in news 
+all
+national //Indian News only
+business
+sports
+world
+politics
+technology
+startup
+entertainment
+miscellaneous
+hatke
+science
+automobile
+
+Api - https://inshorts.deta.dev/news?category=national

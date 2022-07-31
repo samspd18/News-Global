@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">News Global</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="category">Category</string>
+    <string name="global">Global</string>
+    <string name="todo">TODO</string>
+    <string name="news_global">News Global</string>
+
+    <string name="all">all</string>
+    <string name="national">National</string>
+    <string name="business">Business</string>
+    <string name="sports">Sports</string>
+    <string name="world">World</string>
+    <string name="politics">Politics</string>
+    <string name="technology">Technology</string>
+    <string name="startup">Startup</string>
+    <string name="science">Science</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="hatke">Hatke</string>
+    <string name="automobile">Automobile</string>
+
+    <string name="dummy_text">Samantha buys same house where she used to live with ex-husband Naga Chaitanya: Report</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_name">category name</string>
+    <string name="date">27 Jul 2022,Wednesday</string>
+    <string name="time">10:39 am</string>
+    <string name="detailPageTitle">\'Samantha buys same house where she used to live with ex-husband Naga Chaitanya: Report</string>
+    <string name="author_name">Anjali Sharma</string>
+    <string name="content">Actress Samantha Ruth Prabhu bought the same house in Hyderabad where she and her ex-husband Naga Chaitanya used to stay, as per reports. Samantha and Naga Chaitanya sold their Hyderabad home when they were heading for divorce but she bought it back for a higher price later, reports added. She currently resides there along with her mother.</string>
+    <string name="read_more">Read More...</string>
+
+
+</resources>
