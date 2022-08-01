@@ -1,20 +1,27 @@
 package com.satya.newsglobal.ui.fragment.category
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.satya.newsglobal.databinding.FragmentCategoryBinding
+import com.satya.newsglobal.ui.adapter.CategoryAdapter
+import com.satya.newsglobal.ui.adapter.NewsAdapter
+import com.satya.newsglobal.ui.constants.Category
+import com.satya.newsglobal.ui.constants.CategoryArray
+import kotlin.math.log
 
 class CategoryFragment : Fragment() {
 
     private var _binding: FragmentCategoryBinding? = null
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    lateinit var category: Array<Category>
+    private val adapter = CategoryAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,10 +34,13 @@ class CategoryFragment : Fragment() {
         _binding = FragmentCategoryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-//        notificationsViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
+        binding.categoryRecyclerView.adapter  = adapter
+
+
+        category = CategoryArray.categories
+        adapter.setCategories(category)
+        adapter.notifyDataSetChanged()
+
         return root
     }
 

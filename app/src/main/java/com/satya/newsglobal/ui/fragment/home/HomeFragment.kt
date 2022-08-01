@@ -37,11 +37,6 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textHome
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
-
         binding.chipGroupFilter.children.toList().filter { (it as Chip).isCheckable }.forEach{ it ->
             it.setOnClickListener {
                 selectedChipText = (it as Chip).text as String

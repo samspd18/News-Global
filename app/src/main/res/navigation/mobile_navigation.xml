@@ -17,13 +17,13 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.satya.newsglobal.ui.fragment.Global.GlobalFragment"
+        android:name="com.satya.newsglobal.ui.fragment.category.CategoryFragment"
         android:label="@string/category"
         tools:layout="@layout/fragment_category" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.satya.newsglobal.ui.fragment.category.CategoryFragment"
+        android:name="com.satya.newsglobal.ui.fragment.Global.GlobalFragment"
         android:label="@string/global"
         tools:layout="@layout/fragment_global" />
 

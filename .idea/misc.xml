@@ -6,9 +6,12 @@
         <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/drawable/black_gradient.xml" value="0.1425" />
         <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/drawable/white_gradient.xml" value="0.1065" />
         <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/layout/activity_main.xml" value="0.234375" />
+        <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/layout/category_list.xml" value="0.2453125" />
+        <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/layout/fragment_category.xml" value="0.24947916666666667" />
         <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/layout/fragment_news_detail_view.xml" value="0.2581143740340031" />
         <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/layout/news_list_layout.xml" value="0.25" />
+        <entry key="..\:/Android Project/NewsGlobal/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1515625" />
         <entry key="..\:/Android Project/NewsGlobal2/app/src/main/res/drawable/black_gradient.xml" value="0.115" />
         <entry key="..\:/Android Project/NewsGlobal2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Android Project/NewsGlobal2/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
