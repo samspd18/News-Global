@@ -1,5 +1,7 @@
 package com.satya.newsglobal.ui.constants
 
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
 data class Category(var name: String?,var imageUrl: String? )
 class CategoryArray  {
 
@@ -8,7 +10,6 @@ class CategoryArray  {
             Category("National ", "https://cdn-icons-png.flaticon.com/128/3326/3326488.png"),
             Category("Business","https://cdn-icons-png.flaticon.com/128/921/921591.png"),
             Category("Sports","https://cdn-icons-png.flaticon.com/128/857/857455.png"),
-            Category("World","https://cdn-icons-png.flaticon.com/128/744/744480.png"),
             Category("Politics","https://cdn-icons-png.flaticon.com/128/7440/7440506.png"),
             Category("Technology","https://cdn-icons-png.flaticon.com/128/1087/1087840.png"),
             Category("StartUp","https://cdn-icons-png.flaticon.com/128/609/609107.png"),
@@ -20,6 +21,7 @@ class CategoryArray  {
         )
 
         const val sharedPreferenceFileName = "NewsGlobalData"
+        lateinit var navBar: BottomNavigationView
     }
 
 }
