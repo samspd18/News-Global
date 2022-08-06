@@ -18,6 +18,8 @@ class CategoryArray  {
             Category("Science","https://cdn-icons-png.flaticon.com/128/3081/3081530.png"),
             Category("Automobile","https://cdn-icons-png.flaticon.com/128/741/741460.png")
         )
+
+        const val sharedPreferenceFileName = "NewsGlobalData"
     }
 
 }

@@ -1,4 +1,4 @@
-package com.satya.newsglobal.ui.fragment.home
+package com.satya.newsglobal.ui.fragment
 
 import android.content.Context
 import android.content.Intent
@@ -9,8 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.satya.newsglobal.R
 import com.satya.newsglobal.databinding.FragmentNewsDetailViewBinding
 import com.squareup.picasso.Picasso
 import java.util.*
@@ -19,7 +17,6 @@ import java.util.*
 class NewsDetailViewFragment : Fragment() {
     private var _binding: FragmentNewsDetailViewBinding? = null
     private val binding get() = _binding!!
-    private lateinit var navBar: BottomNavigationView
     private var title: String = ""
     private var author:  String = ""
     var content:  String = ""
@@ -37,10 +34,6 @@ class NewsDetailViewFragment : Fragment() {
         _binding = FragmentNewsDetailViewBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         val root: View = binding.root
-
-        //hiding the bottom navigation
-        navBar= activity!!.findViewById(R.id.nav_view)
-        navBar.visibility = View.GONE
 
         title = arguments?.getString("title").toString()
         imageUrl = arguments?.getString("imageUrl").toString()
@@ -93,9 +86,6 @@ class NewsDetailViewFragment : Fragment() {
     private fun backButton() {
         binding.backButton.setOnClickListener {
             activity?.onBackPressed()
-            //showing bottom navigation
-            navBar.visibility = View.VISIBLE
-
         }
     }
 }

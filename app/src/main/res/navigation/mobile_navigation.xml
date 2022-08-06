@@ -19,7 +19,11 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.satya.newsglobal.ui.fragment.category.CategoryFragment"
         android:label="@string/category"
-        tools:layout="@layout/fragment_category" />
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_category_list"
+            app:destination="@id/navigation_category_list" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
@@ -29,11 +33,22 @@
 
     <fragment
         android:id="@+id/navigation_newsDetails"
-        android:name="com.satya.newsglobal.ui.fragment.home.NewsDetailViewFragment"
+        android:name="com.satya.newsglobal.ui.fragment.NewsDetailViewFragment"
         android:label="Detail"
         tools:layout="@layout/fragment_news_detail_view" >
         <action
             android:id="@+id/action_navigation_newsDetails_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_category_list"
+        android:name="com.satya.newsglobal.ui.fragment.category.CategoryNewsListFragment"
+        android:label="CategoryList"
+        tools:layout="@layout/fragment_category_news_list">
+        <action
+            android:id="@+id/action_navigation_category_list_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+
 </navigation>

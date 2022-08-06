@@ -6,23 +6,21 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.satya.newsglobal.R
-import com.satya.newsglobal.databinding.NewsListLayoutBinding
+import com.satya.newsglobal.databinding.CategoryNewsListBinding
 import com.satya.newsglobal.ui.models.Data
 import com.squareup.picasso.Picasso
 
-class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MainViewHolder>() {
+class CategoryNewsListAdapter: RecyclerView.Adapter<CategoryNewsListAdapter.MainViewHolder>() {
     private var news = mutableListOf<Data>()
     private var mainViewHolderType = ""
-    fun type(type: String) {
-        mainViewHolderType = type
-    }
 
-    fun setNewsList(news: List<Data>) {
+
+    fun setCategoryWiseNews(news: List<Data>) {
         this.news = news.toMutableList()
         notifyDataSetChanged()
     }
 
-    class MainViewHolder(var binding: NewsListLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MainViewHolder(var binding: CategoryNewsListBinding) : RecyclerView.ViewHolder(binding.root) {
         var newsTitle = ""
         var author = ""
         var content = ""
@@ -35,7 +33,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = NewsListLayoutBinding.inflate(inflater,parent,false)
+        val binding = CategoryNewsListBinding.inflate(inflater,parent,false)
         return MainViewHolder(binding)
     }
 

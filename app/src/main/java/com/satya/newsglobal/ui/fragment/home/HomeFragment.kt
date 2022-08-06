@@ -10,11 +10,13 @@ import android.widget.Toast
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.chip.Chip
+import com.satya.newsglobal.R
 import com.satya.newsglobal.databinding.FragmentHomeBinding
 import com.satya.newsglobal.ui.adapter.NewsAdapter
+import com.satya.newsglobal.ui.constants.CategoryArray.Companion.sharedPreferenceFileName
 import com.satya.newsglobal.ui.viewModel.NewsListViewModel
-import kotlinx.coroutines.Dispatchers
 
 class HomeFragment : Fragment() {
 
@@ -23,10 +25,11 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    var sharedPreferenceFileName = "NewsGlobalData"
+
 
     private lateinit var viewModel: NewsListViewModel
     private val adapter = NewsAdapter()
+    private lateinit var navBar: BottomNavigationView
 
 
     override fun onCreateView(
@@ -102,6 +105,18 @@ class HomeFragment : Fragment() {
         val editor = sharedPreference.edit()
         editor.putString("selectedCategory",category)
         editor.commit()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        navBar= activity!!.findViewById(R.id.nav_view)
+        navBar.visibility = View.VISIBLE
+    }
+
+    override fun onPause() {
+        super.onPause()
+        navBar= activity!!.findViewById(R.id.nav_view)
+        navBar.visibility = View.GONE
     }
 
     override fun onDestroyView() {

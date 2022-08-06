@@ -51,4 +51,13 @@ class NewsListViewModel(application: Application) : AndroidViewModel(application
             apiCallFinished()
         }
     }
+
+    fun makeApiCallForCategoryWiseNews(selectedCategory: String) {
+        viewModelScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
+            val retroInstance = RetroInstance.getRetroInstance().create(RetroService::class.java)
+            val response = retroInstance.getNews(selectedCategory)
+            newsListLiveData.postValue(response)
+            apiCallFinished()
+        }
+    }
 }

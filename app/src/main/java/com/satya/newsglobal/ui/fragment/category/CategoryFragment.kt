@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.satya.newsglobal.R
 import com.satya.newsglobal.databinding.FragmentCategoryBinding
 import com.satya.newsglobal.ui.adapter.CategoryAdapter
 import com.satya.newsglobal.ui.adapter.NewsAdapter
@@ -22,6 +24,7 @@ class CategoryFragment : Fragment() {
     private val binding get() = _binding!!
     lateinit var category: Array<Category>
     private val adapter = CategoryAdapter()
+    private lateinit var navBar: BottomNavigationView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,6 +45,18 @@ class CategoryFragment : Fragment() {
         adapter.notifyDataSetChanged()
 
         return root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        navBar= activity!!.findViewById(R.id.nav_view)
+        navBar.visibility = View.VISIBLE
+    }
+
+    override fun onPause() {
+        super.onPause()
+        navBar= activity!!.findViewById(R.id.nav_view)
+        navBar.visibility = View.GONE
     }
 
     override fun onDestroyView() {

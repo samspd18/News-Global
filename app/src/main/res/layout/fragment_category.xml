@@ -9,8 +9,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_520sdp"
+        android:layout_height="match_parent"
         android:visibility="visible"
+        android:layout_marginBottom="@dimen/_52sdp"
         android:layout_marginStart="@dimen/_5sdp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
